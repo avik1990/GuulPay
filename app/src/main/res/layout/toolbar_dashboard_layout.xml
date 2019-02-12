@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@android:color/white">
+
+
+    <com.guulpay.customUiComponents.QuicksandMediumTextview
+        android:id="@+id/tvCommonToolbarDashboardHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Coomon Toolbar DashboardHome"
+        android:textSize="@dimen/normalTextSize" />
+
+    <ImageView
+        android:id="@+id/imgvwNavMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:src="@drawable/ic_menu_icon" />
+
+    <ImageView
+        android:id="@+id/imgvwGuulpayLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_toRightOf="@+id/imgvwNavMenu"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_green_logo" />
+
+    <ImageView
+        android:id="@+id/imgvwNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@drawable/ic_bell_icon" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/cart_badge"-->
+        <!--android:layout_width="20dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:layout_gravity="right|end|top"-->
+        <!--android:layout_marginEnd="-5dp"-->
+        <!--android:layout_marginRight="-5dp"-->
+        <!--android:layout_marginTop="3dp"-->
+        <!--android:background="@drawable/badge_background"-->
+        <!--android:gravity="center"-->
+        <!--android:padding="3dp"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:text="0"-->
+        <!--android:textSize="10sp"/>-->
+
+</RelativeLayout>
+

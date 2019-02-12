@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/llChangepasscode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.2dp"
+            android:background="@drawable/toolbar_dropshadow" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:src="@drawable/guulpay_logo" />
+
+        <!-- FrameLayout is taken due to reduce the space between upper logo -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/onlineService"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/smallTextSize" />
+        </FrameLayout>
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvResetPasscodeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/changePasscode"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/mediumTextSize" />
+
+        <com.guulpay.customUiComponents.QuicksandRegularTextview
+            android:id="@+id/tvEnterResetPwdTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/changePasscodeConfirmingCurrentPasscode"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/mediumTextSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="vertical">
+
+            <com.guulpay.customUiComponents.QuicksandRegularTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="left"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/currentPasscode"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <include layout="@layout/enter_passcode_layout" />
+
+            <com.guulpay.customUiComponents.QuicksandRegularTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="left"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/newPasscode"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <include layout="@layout/new_passcode_layout" />
+        </LinearLayout>
+
+        <com.guulpay.customUiComponents.CustomButton
+            android:id="@+id/btSubmitResetPasscode"
+            android:layout_width="@dimen/buttonSubmitSize"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llPrivacyPolicyTc"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/drawable_colorprimary_roundedcorner"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/mediumTextSize"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:splitMotionEvents="false">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:layout_marginRight="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:cardElevation="@dimen/cardElevation">
+
+        <LinearLayout
+            android:id="@+id/llRechargeAmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.guulpay.customUiComponents.CircleImageView
+                android:id="@+id/imgvwBankIcon"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/_7sdp"
+                android:src="@drawable/ic_placeholder"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/llAccountDet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight=".7"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:id="@+id/tvMobileNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="30"
+                    android:text="+91 9433435957"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/smallTextSize" />
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:id="@+id/tvRechargeDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last recharge on 22 Nov 2018"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:textSize="@dimen/_9sdp" />
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:id="@+id/tvRechargeAmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text=""
+                    android:textSize="@dimen/_9sdp" />
+
+            </LinearLayout>
+
+            <com.guulpay.customUiComponents.CustomButton
+                android:id="@+id/btRepeat"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:background="@drawable/drawable_colorprimary_roundedcorner_no_soildcolor"
+                android:text="Repeat"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/mediumTextSize" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+ </LinearLayout>

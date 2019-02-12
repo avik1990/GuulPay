@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGrey">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Toolbar above -->
+        <include
+            android:id="@+id/include_toolbar"
+            layout="@layout/toolbar_dashboard_layout" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.2dp"
+            android:background="@drawable/toolbar_dropshadow" />
+
+        <!-- FrameLayout for fragment container -->
+        <FrameLayout
+            android:id="@+id/flFragmentContainerDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rlBottomBar"
+            android:layout_below="@+id/include_toolbar" />
+        <!-- Bottom bar menu -->
+        <RelativeLayout
+            android:id="@+id/rlBottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white">
+
+            <include layout="@layout/bottombar_layout" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- Middle image in bottom bar -->
+    <FrameLayout
+        android:id="@+id/flScanImageBottomBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:layout_marginRight="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/imgvwPaymentMiddleBottomBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:background="@drawable/ic_scan_button" />
+    </FrameLayout>
+
+    <!-- Sliding drawer layout -->
+    <LinearLayout
+        android:id="@+id/llLeftSlideDrawer"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/navigation_drawer" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

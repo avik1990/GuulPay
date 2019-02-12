@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGrey"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <!-- Top most cardview -->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:padding="@dimen/_10sdp">
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:id="@+id/tvTotalAmtPaid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total amount to be paid : $0.0"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <LinearLayout
+                    android:id="@+id/llChckbxBankDet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTotalAmtPaid"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:id="@+id/chckbx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:button="@drawable/drawable_checkbox_selector" />
+
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvBankDetCompletePayment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Denmark State Bank Account No. **** 1234"
+                        android:textSize="@dimen/mediumTextSize" />
+
+                </LinearLayout>
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:id="@+id/tvGuulpayText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llChckbxBankDet"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:alpha="0.5"
+                    android:text="7087286870@ Guulpay"
+                    android:textSize="@dimen/smallTextSize" />
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:id="@+id/tvAddNewBank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvGuulpayText"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/addNewBank"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:id="@+id/tvPayNowBankDet"
+                    android:layout_width="@dimen/_85sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tvGuulpayText"
+                    android:background="@drawable/drawable_colorprimary_roundedcorner"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/payNow"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/mediumTextSize"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvSavedCardsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/savedCards"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/mediumTextSize" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewSavedCards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvOtherPaymentsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="@string/otherPaymentModes"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/mediumTextSize" />
+
+        <!-- Cardview Debit card -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardvwDebitCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp">
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:id="@+id/tvDebitCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_7sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:drawableRight="@drawable/ic_next_arrow"
+                    android:text="@string/debitCard"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <include
+                    android:id="@+id/include_debitcard_layout"
+                    layout="@layout/debit_card_layout"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/llChckbxSavedDebitCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_7sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:id="@+id/chckbxSaveDebitCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_7sdp"
+                        android:button="@drawable/drawable_checkbox_selector" />
+
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvSaveCardCompletePayment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/saveThisCard"
+                        android:textSize="@dimen/mediumTextSize" />
+
+                </LinearLayout>
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:id="@+id/tvPayNowFromDebitCrd"
+                    android:layout_width="@dimen/_85sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/drawable_colorprimary_roundedcorner"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/payNow"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/mediumTextSize"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <!-- Cardview Credit card -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardvwCreditCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp">
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:id="@+id/tvCreditCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_7sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:drawableRight="@drawable/ic_next_arrow"
+                    android:text="@string/creditCard"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <include
+                    android:id="@+id/include_creditcard_layout"
+                    layout="@layout/credit_card_layout"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/llChckbxSavedCreditCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_7sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:id="@+id/chckbxSaveCreditCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_7sdp"
+                        android:button="@drawable/drawable_checkbox_selector" />
+
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvSaveCreditCardCompletePayment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/saveThisCard"
+                        android:textSize="@dimen/mediumTextSize" />
+
+                </LinearLayout>
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:id="@+id/tvPayNowFromCreditCrd"
+                    android:layout_width="@dimen/_85sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/drawable_colorprimary_roundedcorner"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/payNow"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/mediumTextSize"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#007481</color>
+    <color name="colorPrimaryDark">#065e68</color>
+    <color name="colorAccent">#007481</color>
+    <color name="lightGrey">#eee</color>
+    <color name="alphaColorPrimary">#80007481</color>
+    <color name="lightGreen">#00afc1</color>
+    <color name="grey">#E5E5E5</color>
+    <color name="buttonBg">#348C96</color>
+    <color name="lightgrey">#999999</color>
+    <color name="transparent">#00000000</color>
+
+
+
+    <!-- Pie chart items color -->
+    <array name="pieChartItems">
+        <item name="pieChartMobileRecharge">#FA8A00</item>
+        <!--<item name="pieChartBankTransfer">#FFB200</item>-->
+        <item name="pieChartGuulex">#FFF78C</item>
+        <!--<item name="pieChartGas">#8CEAFF</item>-->
+        <!--<item name="pieChartElectricBill">#FF8C9D</item>-->
+        <!--<item name="pieChartLandline">#FFD08C</item>-->
+    </array>
+
+
+    <color name="pieChartMobileRecharge">#FA8A00</color>
+    <!--<color name="pieChartBankTransfer">#FFB200</color>-->
+    <color name="pieChartGuulex">#FFF78C</color>
+    <!--<color name="pieChartGas">#8CEAFF</color>-->
+    <!--<color name="pieChartElectricBill">#FF8C9D</color>-->
+    <!--<color name="pieChartLandline">#FFD08C</color>-->
+
+   <!-- <array name="pieChartItems1">
+        <item name="pieChartDTH">#FA8A00</item>
+        <item name="pieChartBankTransfer">#FFB200</item>
+        <item name="pieChartInternet">#FFD08C</item>
+        <item name="pieChartGas">#FFF78C</item>8CEAFF
+        <item name="pieChartElectricBill">#26A59A</item>
+        <item name="pieChartLandline">#00828F</item>
+    </array>-->
+
+
+    <!--Edited by Rishabh 25-01-2019 -->
+
+    <color name="hrRowGuulexFinalProceedToPay">#9A9A9A</color>
+
+</resources>

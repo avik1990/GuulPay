@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "126222657811",
+    "firebase_url": "https://guulpay-f74a1.firebaseio.com",
+    "project_id": "guulpay-f74a1",
+    "storage_bucket": "guulpay-f74a1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126222657811:android:db80010a40b775ac",
+        "android_client_info": {
+          "package_name": "com.guulpay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126222657811-2am31dgogad4jiegu6ov3d8aht01m4bi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_GfKWkls0KP6g5QgcZg6_LaATXd3GLB0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

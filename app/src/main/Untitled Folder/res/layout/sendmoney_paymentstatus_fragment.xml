@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGrey"
+    android:orientation="vertical">
+
+    <!-- Upper part CardView containing details -->
+    <android.support.v7.widget.CardView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:cardElevation="@dimen/cardElevation"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:id="@+id/llPrintShare"
+                android:layout_marginTop="@dimen/_10sdp"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_print_icon" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_share_icon" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/ic_success_icon" />
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center_horizontal"
+                android:text="$ 100.00"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/extraLargeTextSize" />
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/mediumTextSize"
+                android:text="Paid Successfully to" />
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center_horizontal"
+                android:text="Andrew"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/mediumTextSize"
+                android:text="Wallet Linked to Phone No." />
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center_horizontal"
+                android:text="7235689631"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/mediumTextSize"
+                android:text="AUG 21, 2018 at 05:07 pm" />
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/mediumTextSize"
+                android:text="Bank Txn ID: 1234567890" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <!-- Back button -->
+    <com.guulpay.customUiComponents.CustomButton
+        android:layout_width="@dimen/buttonBackToHome"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@drawable/drawable_colorprimary_roundedcorner"
+        android:text="@string/backToHome"
+        android:textAllCaps="false"
+        android:id="@+id/btBackToHome"
+        android:textSize="@dimen/mediumTextSize"
+        android:textColor="@android:color/white" />
+</LinearLayout>

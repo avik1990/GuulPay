@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/svproceedtopay"
+    android:fitsSystemWindows="true"
+    tools:context=".guulexfinal.GuulexfinalActivity">
+
+    <LinearLayout
+        android:id="@+id/llproceedtopay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvSelectProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="General"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_8sdp" />
+
+        <android.support.v7.widget.CardView
+            android:layout_margin="@dimen/_7sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/lltopRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:orientation="vertical">
+
+                        <com.guulpay.customUiComponents.QuicksandRegularTextview
+                            android:id="@+id/tvProduct"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="@dimen/_7sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="Product"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/mediumTextSize"
+                            android:textStyle="bold" />
+
+                        <com.guulpay.customUiComponents.QuicksandRegularTextview
+                            android:id="@+id/tvProductDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="Cash"
+                            android:layout_marginLeft="@dimen/_7sdp"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/mediumTextSize"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.guulpay.customUiComponents.QuicksandRegularTextview
+                            android:id="@+id/tvCurrency"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="Currency"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/mediumTextSize"
+                            android:textStyle="bold" />
+
+                        <com.guulpay.customUiComponents.QuicksandRegularTextview
+                            android:id="@+id/tvCurrencyDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="US Dollar(USD)"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/mediumTextSize"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llmiddlerow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lltopRow"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.guulpay.customUiComponents.QuicksandRegularTextview
+                            android:id="@+id/tvForexAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="@dimen/_7sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="Forex Amount"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/mediumTextSize"
+                            android:textStyle="bold" />
+
+                        <com.guulpay.customUiComponents.QuicksandRegularTextview
+                            android:id="@+id/tvForexAmountDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="400.00"
+                            android:layout_marginLeft="@dimen/_7sdp"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/mediumTextSize"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <com.guulpay.customUiComponents.QuicksandRegularTextview
+                            android:id="@+id/tvRate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="Rate"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/mediumTextSize"
+                            android:textStyle="bold" />
+
+                        <com.guulpay.customUiComponents.QuicksandRegularTextview
+                            android:id="@+id/tvRateDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="71.74"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/mediumTextSize"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@+id/llmiddlerow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/_7sdp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <com.guulpay.customUiComponents.QuicksandRegularTextview
+                            android:id="@+id/tvAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_7sdp"
+                            android:text="Amount($)"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/mediumTextSize"
+                            android:textStyle="bold" />
+
+                        <com.guulpay.customUiComponents.QuicksandRegularTextview
+                            android:id="@+id/tvAmountDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_7sdp"
+                            android:text="1450.00"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/mediumTextSize"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvDeliveryMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="Delivery Mode"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_8sdp" />
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_7sdp"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/lldeliveryMode"
+                android:layout_margin="@dimen/_7sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_deselect_radio_icon"
+                    android:layout_weight=".15"/>
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:id="@+id/tvDoorDelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Door Delivery"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_select_radio_icon"
+                    android:layout_weight=".15"/>
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:id="@+id/tvBranchPickUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Branch Pick Up"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+                <View
+                    android:layout_below="@+id/lldeliveryMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"/>
+            <LinearLayout
+                android:layout_below="@+id/lldeliveryMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:id="@+id/tvAddress1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Centrum (Finland)"
+                    android:layout_margin="@dimen/_7sdp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp"
+                    />
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:id="@+id/tvAddressFull"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp"
+                    />
+                <LinearLayout
+                    android:layout_below="@+id/tvAddressFull"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:id="@+id/tvAddressTiming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Opening Time: 9:30 AM- 6:00 PM"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_location_icon"
+                        android:layout_weight=".40"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/black"/>
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:id="@+id/tvAddress2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Centrum (Finland)"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:id="@+id/tvAddressFull2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp"
+                    />
+                <LinearLayout
+                    android:layout_below="@+id/tvAddressFull2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvAddressTiming2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Opening Time: 9:30 AM- 6:00 PM"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_location_icon"
+                        android:layout_weight=".40"/>
+                </LinearLayout>
+            </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvPersonalDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="Personal Details"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_8sdp" />
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_7sdp"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/llFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvFirstName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="First Name"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvFirstNameDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Andrew"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lllastName"
+                    android:layout_below="@+id/llFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvLastName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Name"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvLastNameDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Andrew"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llPhone"
+                    android:layout_below="@+id/lllastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvPhoneDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+358 501234567"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/llEmail"
+                    android:layout_below="@+id/llPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EmailID"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvEmailDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="andrew.maken@gmail.com"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/llPassportNo"
+                    android:layout_below="@+id/llEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvPassport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EmailID"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvPassportDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FND12456A"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvModeofPayments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="Mode of Payments"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_8sdp" />
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_7sdp"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/llpaymantmode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_deselect_radio_icon"
+                        android:layout_weight=".15"/>
+
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvWallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Wallet"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_select_radio_icon"
+                        android:layout_weight=".15"/>
+
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvPayOffline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Pay Offline"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_7sdp"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/llguulexAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvGuulex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Guulex"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_weight="1"/>
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvGuulexAmounttFinal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="$1450"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:gravity="right"/>
+
+                </LinearLayout>
+                <View
+                    android:id="@+id/hramount"
+                    android:layout_below="@+id/llguulexAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/black"/>
+                <LinearLayout
+                    android:layout_below="@+id/hramount"
+                    android:id="@+id/llguulexTax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvGuulexTax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Tax"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_weight="1"/>
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvGuulexAmountTaxFinal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="$70.65"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:gravity="right"/>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/hrtax"
+                    android:layout_below="@+id/llguulexTax"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/black"/>
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:layout_below="@+id/hrtax"
+                    android:id="@+id/tvpayableDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="@string/guulexTaxDetails"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_8sdp" />
+
+                <LinearLayout
+                    android:layout_below="@+id/tvpayableDetails"
+                    android:id="@+id/llTotalAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvTotalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Total"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_weight="1"/>
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvTotalAmountDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="$71.00"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:gravity="right"/>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/htPayableAmount"
+                    android:layout_below="@+id/llTotalAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/black"/>
+
+                <LinearLayout
+                    android:id="@+id/llAmountPayable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/htPayableAmount"
+                    android:orientation="horizontal">
+
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvAmountPayable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Amount Payable Later"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvAmountPayableDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="$1449.65"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <com.guulpay.customUiComponents.QuicksandRegularTextview
+            android:id="@+id/tvAmountTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="117dp"
+            android:layout_marginTop="30dp"
+            android:text="Total Amount :"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/mediumTextSize"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgvwfinlandicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvAmountTotal"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="1dp"
+            android:layout_toStartOf="@+id/tvAmountDisplay"
+            android:layout_weight="1"
+            android:background="@drawable/ic_finland_icon" />
+
+        <com.guulpay.customUiComponents.QuicksandRegularTextview
+            android:id="@+id/tvAmountDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="133dp"
+            android:text=" 1,450"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/mediumTextSize"
+            android:textStyle="bold" />
+
+        <com.guulpay.customUiComponents.CustomButton
+            android:id="@+id/btProceed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAmountTotal"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:background="@drawable/drawable_colorprimary_roundedcorner"
+            android:enabled="true"
+            android:text="PROCEED"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/mediumTextSize" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

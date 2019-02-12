@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@android:color/white"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imgvwGuulpayLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:src="@drawable/ic_green_logo"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imgvwCommonToolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:src="@drawable/ic_arrow_green_icon" />
+
+    <com.guulpay.customUiComponents.QuicksandMediumTextview
+        android:id="@+id/tvCommonToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Title"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/normalTextSize" />
+</FrameLayout>

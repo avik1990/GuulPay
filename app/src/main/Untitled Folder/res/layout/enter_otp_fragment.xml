@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:scrollbars="none"
+    android:splitMotionEvents="false">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/llEnterOtpFrag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:src="@drawable/guulpay_logo" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/onlineService"
+                android:textSize="@dimen/smallTextSize" />
+        </FrameLayout>
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvVerifyPhText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:gravity="center_horizontal"
+            android:text="@string/verifyPhoneNumber"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/mediumTextSize" />
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvOtpSentMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/otpSentMsg"
+            android:textSize="@dimen/mediumTextSize" />
+
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvEnterOtpText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center_horizontal"
+            android:text="@string/enterTheOtp"
+            android:textSize="@dimen/mediumTextSize" />
+
+        <include layout="@layout/enter_otp_layout" />
+
+        <LinearLayout
+            android:id="@+id/llDidntReceiveOtpResend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".6"
+                android:gravity="right"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/didntReceiveOtp"
+                android:textSize="@dimen/smallTextSize" />
+
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:id="@+id/tvResendOtp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:gravity="left"
+                android:text="@string/resendOtp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/smallTextSize" />
+        </LinearLayout>
+
+
+        <com.guulpay.customUiComponents.CustomButton
+            android:id="@+id/btSubmitEnterOtp"
+            android:layout_width="@dimen/buttonVerifySize"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/drawable_colorprimary_roundedcorner"
+            android:text="@string/verify"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/mediumTextSize" />
+
+    </LinearLayout>
+</ScrollView>

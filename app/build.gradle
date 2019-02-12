@@ -1,0 +1,152 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.guulpay"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 3
+        versionName "1.7"
+        //    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+
+    sourceSets {
+        main { assets.srcDirs = ['src/main/assets', 'src/main/assets/', 'src/main/assets/font'] }
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+
+    flavorDimensions "default"
+    productFlavors {
+        production {
+            dimension "default"
+            applicationId 'com.guulpay'
+            versionNameSuffix 'prod'
+            versionCode 1
+            versionName "1.3"
+        }
+        staging {
+            dimension "default"
+            applicationId 'com.guulpay.dev'
+            versionNameSuffix 'dev'
+            versionCode 1
+            versionName "1.0"
+        }
+    }
+
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    /*implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'*/
+
+    // Support Lib
+    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+    // RecyclerView
+    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+
+    // For SDP library for different layout compatibility
+    implementation "com.intuit.sdp:sdp-android:$rootProject.sdpVersion"
+
+    // For CryptoPreference library. Encrypts the values of shared preference.
+    implementation "com.github.AndreaCioccarelli:CryptoPrefs:$rootProject.cryptoPrefsVersion"
+
+    /* Pie Chart library */
+    implementation "com.github.lecho:hellocharts-library:$rootProject.helloChartVersion"
+
+    // RxJava
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxJavaVersion"
+
+    // RxAndroid
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroidVersion"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-jackson:$rootProject.retrofitVersion"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+
+
+    // Anko dialogs
+    implementation "org.jetbrains.anko:anko-commons:$rootProject.ankoVersion"
+    implementation "org.jetbrains.anko:anko-design:$rootProject.ankoVersion"
+    implementation "org.jetbrains.anko:anko-design-coroutines:$rootProject.ankoVersion"
+
+    // For QR/Bar code scanner
+    implementation "me.dm7.barcodescanner:zxing:$rootProject.zXingScannerVersion"
+
+    /* For Date picker dialog */
+    implementation "com.github.drawers:SpinnerDatePicker:$rootProject.datePickerVersion"
+
+    // For runtime permissions
+    implementation "com.lovedise:permissiongen:$rootProject.permissionGenVersion"
+
+    // Fabric crashlytics
+    implementation("com.crashlytics.sdk.android:crashlytics:$rootProject.fabricVersion") {
+        transitive = true;
+    }
+    api 'com.google.guava:guava:26.0-android'
+
+    //firebase notification
+    implementation 'com.google.firebase:firebase-core:16.0.6'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.google.firebase:firebase-auth:16.1.0'
+
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    //AVILoader
+    implementation 'com.wang.avi:library:2.1.3'
+
+    //formatting phone no.
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.8.10'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //add image cropper
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.6.+'
+
+    //Glide library
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+    implementation 'jp.wasabeef:glide-transformations:3.1.1'
+
+    //html parser
+    implementation 'org.jsoup:jsoup:1.11.3'
+    implementation 'com.github.delight-im:Android-AdvancedWebView:v3.0.0'
+
+}
+
+apply plugin: 'com.google.gms.google-services'

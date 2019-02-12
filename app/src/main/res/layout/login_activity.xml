@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llLoginParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:splitMotionEvents="false">
+
+    <!-- Upper half of layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvWelcomeTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:text="@string/welcomeTo"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/normalTextSize"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/imgvwGuulpay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvWelcomeTo"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/guulpay_logo" />
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvOnlineService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgvwGuulpay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@android:color/black"
+            android:text="@string/onlineService"
+            android:textSize="@dimen/smallTextSize"
+            android:textStyle="normal" />
+
+
+        <LinearLayout
+            android:id="@+id/llLoginInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvOnlineService"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+            <!-- Phone number layout with Country code -->
+            <LinearLayout
+                android:id="@+id/llPhoneLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_white_grey"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_3sdp">
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:id="@+id/tvCountryCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableRight="@drawable/down_arrow"
+                    android:gravity="center_vertical"
+                    android:maxLength="8"
+                    android:visibility="gone"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:text="+358"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                    android:hint="@string/phoneNumber"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="13"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/mediumTextSize"
+                    android:visibility="visible" />
+            </LinearLayout>
+            <!-- Passocode text -->
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:id="@+id/tvPasscodeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="left"
+                android:text="@string/passcode"
+                android:textSize="@dimen/mediumTextSize"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+            <!-- EditText Passcode layout -->
+            <include layout="@layout/enter_passcode_layout" />
+
+            <!-- Forgot Passcode text -->
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:id="@+id/tvForgotPwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="right"
+                android:text="@string/forgotPwd"
+                android:textColor="@color/buttonBg"
+                android:textSize="@dimen/mediumTextSize"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+            <!-- Next Button -->
+            <com.guulpay.customUiComponents.CustomButton
+                android:id="@+id/btNext"
+                android:layout_width="@dimen/buttonNextSize"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:alpha="0.5"
+                android:background="@drawable/drawable_colorprimary_roundedcorner"
+                android:enabled="false"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/mediumTextSize" />
+
+        </LinearLayout>
+
+
+        <com.guulpay.customUiComponents.QuicksandRegularTextview
+            android:id="@+id/tvDontHaveAnAccountUpperPart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@android:color/black"
+            android:text="@string/dontHaveAnAccount"
+            android:textSize="@dimen/mediumTextSize"
+            android:textStyle="normal"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <!-- Lower half of screen, will be visible if the device is compatible to Fingerprint sensor -->
+    <LinearLayout
+        android:id="@+id/llLowerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_10sdp"
+        android:visibility="visible"
+        android:weightSum="1">
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvOrLoginWith"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="@string/orLoginWith"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/mediumTextSize"
+            android:textStyle="normal" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imgvwFingerPrint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_finger_print" />
+        </FrameLayout>
+
+        <com.guulpay.customUiComponents.QuicksandRegularTextview
+            android:id="@+id/tvDontHaveAnAccountLowerPart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@android:color/black"
+            android:text="@string/dontHaveAnAccount"
+            android:textSize="@dimen/mediumTextSize"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+</LinearLayout>

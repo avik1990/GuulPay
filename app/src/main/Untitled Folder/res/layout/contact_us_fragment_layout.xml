@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:scrollbars="none"
+    android:splitMotionEvents="false">
+
+    <LinearLayout
+        android:id="@+id/llContactusParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:splitMotionEvents="false">
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="We'd love to hear from you" />
+
+        <!-- Lower part of layout containing EditText boxes -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <LinearLayout
+                android:id="@+id/llSignupContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/drawable_white_grey"
+                    android:drawableLeft="@drawable/ic_user_icon"
+                    android:drawablePadding="@dimen/_15sdp"
+                    android:enabled="false"
+                    android:hint="@string/name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLength="50"
+                    android:padding="@dimen/_10sdp"
+                    android:textSize="@dimen/mediumTextSize" />
+
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/drawable_white_grey"
+                    android:drawableLeft="@drawable/ic_email_icon"
+                    android:drawablePadding="@dimen/_15sdp"
+                    android:enabled="false"
+                    android:hint="@string/email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:padding="@dimen/_10sdp"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/drawable_white_grey"
+                    android:drawableLeft="@drawable/ic_mobile_icon"
+                    android:drawablePadding="@dimen/_15sdp"
+                    android:enabled="false"
+                    android:hint="@string/mobile"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:padding="@dimen/_10sdp"
+                    android:textSize="@dimen/mediumTextSize" />
+
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/drawable_white_grey"
+                    android:drawableLeft="@drawable/ic_email_icon"
+                    android:drawablePadding="@dimen/_15sdp"
+                    android:hint="Write your message"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:maxLength="50"
+                    android:padding="@dimen/_10sdp"
+                    android:textSize="@dimen/mediumTextSize" />
+            </LinearLayout>
+
+
+            <!-- Sign up button -->
+            <com.guulpay.customUiComponents.CustomButton
+                android:id="@+id/btSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llSignupContent"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:alpha=".5"
+                android:background="@drawable/drawable_colorprimary_roundedcorner"
+                android:enabled="false"
+                android:text="Send Message"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/mediumTextSize" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

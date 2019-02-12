@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/llSignupParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:splitMotionEvents="false"
+        android:weightSum="1.2">
+
+        <!-- Upper part of layout containing Logo -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3">
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:id="@+id/tvWelcomeTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:text="@string/welcomeTo"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/normalTextSize"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/imgvwGuulpay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvWelcomeTo"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/guulpay_logo" />
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:id="@+id/tvOnlineService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgvwGuulpay"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/onlineService"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/smallTextSize"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+
+        <!-- Lower part of layout containing EditText boxes -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_weight=".9"
+            android:padding="@dimen/_5sdp">
+
+            <LinearLayout
+                android:id="@+id/llSignupContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                    android:drawableLeft="@drawable/ic_user_icon"
+                    android:drawablePadding="@dimen/_15sdp"
+                    android:hint="@string/name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLength="50"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvCountryCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_mobile_icon"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:drawableRight="@drawable/down_arrow"
+                        android:gravity="center_vertical"
+                        android:maxLength="8"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="+358"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/mediumTextSize" />
+
+                    <com.guulpay.customUiComponents.CustomEditText
+                        android:id="@+id/etMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                        android:hint="@string/mobile"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="13"
+                        android:textSize="@dimen/mediumTextSize" />
+                </LinearLayout>
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                    android:drawableLeft="@drawable/ic_email_icon"
+                    android:drawablePadding="@dimen/_15sdp"
+                    android:hint="@string/email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etPasscode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                    android:drawableLeft="@drawable/ic_password_icon"
+                    android:drawablePadding="@dimen/_15sdp"
+                    android:hint="@string/passcode"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etConfirmPasscode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                    android:drawableLeft="@drawable/ic_password_icon"
+                    android:drawablePadding="@dimen/_15sdp"
+                    android:hint="@string/confirmPasscode"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    android:textSize="@dimen/mediumTextSize" />
+            </LinearLayout>
+
+            <!-- Terms & Conditions and Privacy Policy layout -->
+            <LinearLayout
+                android:id="@+id/llPrivacyPolicyTc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llSignupContent"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_45sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/chckbx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:button="@drawable/drawable_checkbox_selector" />
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:id="@+id/tvPrivacyPolicyTC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/termsCondition"
+                    android:textSize="@dimen/smallTextSize" />
+
+            </LinearLayout>
+
+            <!-- Sign up button -->
+            <com.guulpay.customUiComponents.CustomButton
+                android:id="@+id/btSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llPrivacyPolicyTc"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:alpha=".5"
+                android:background="@drawable/drawable_colorprimary_roundedcorner"
+                android:enabled="false"
+                android:text="@string/signUp"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <!-- Already registered user text -->
+            <com.guulpay.customUiComponents.QuicksandRegularTextview
+                android:id="@+id/tvSignInHere"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/btSignUp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="@string/alreadyHaveAccount"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/mediumTextSize"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

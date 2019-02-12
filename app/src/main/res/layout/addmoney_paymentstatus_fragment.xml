@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+   <include layout="@layout/paymentstatus_layout" />
+
+    <com.guulpay.customUiComponents.CustomButton
+        android:layout_width="@dimen/buttonBackToHome"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@drawable/drawable_colorprimary_roundedcorner"
+        android:text="@string/backToHome"
+        android:textAllCaps="false"
+        android:id="@+id/btBackToHome"
+        android:textSize="@dimen/mediumTextSize"
+        android:textColor="@android:color/white" />
+</LinearLayout>

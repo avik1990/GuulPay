@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGrey"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:cardElevation="@dimen/cardElevation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_10sdp">
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textSize="@dimen/mediumTextSize"
+                android:textColor="@android:color/black"
+                android:text="@string/autoLoadAmount" />
+
+            <com.guulpay.customUiComponents.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/drawable_white_grey"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/mediumTextSize"
+                android:inputType="number"
+                android:maxLength="6"
+                android:text="200" />
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/mediumTextSize"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="@string/lowerLimitOfWalletBalance" />
+
+            <com.guulpay.customUiComponents.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_white_grey"
+                android:padding="@dimen/_10sdp"
+                android:inputType="number"
+                android:textSize="@dimen/mediumTextSize"
+                android:maxLength="6"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="50" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <com.guulpay.customUiComponents.QuicksandMediumTextview
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textSize="@dimen/mediumTextSize"
+        android:textColor="@android:color/black"
+        android:text="@string/bankAccount" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:cardElevation="@dimen/cardElevation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="@string/selectBankAccount"
+                android:textSize="@dimen/mediumTextSize"
+                android:textColor="@color/colorPrimary" />
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:textSize="@dimen/mediumTextSize"
+                android:textColor="@android:color/black"
+                android:drawableRight="@drawable/ic_next_arrow"
+                android:text="123456789012" />
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:text="Nordea Bank Finland"
+                android:textSize="@dimen/mediumTextSize"
+                android:textColor="@android:color/darker_gray" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <com.guulpay.customUiComponents.CustomButton
+        android:layout_width="@dimen/buttonNextSize"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/drawable_colorprimary_roundedcorner"
+        android:text="@string/next"
+        android:textSize="@dimen/mediumTextSize"
+        android:id="@+id/btNextAutoLoad"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white" />
+</LinearLayout>

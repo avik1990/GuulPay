@@ -1,0 +1,296 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/drawable_lightgrey_roundedcorner"
+        android:orientation="horizontal">
+
+        <com.guulpay.customUiComponents.QuicksandRegularTextview
+            android:id="@+id/tvDomestic"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_colorprimary_roundedcorner"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_7sdp"
+            android:text="@string/domestic"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/mediumTextSize" />
+
+        <com.guulpay.customUiComponents.QuicksandRegularTextview
+            android:id="@+id/tvInternational"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_7sdp"
+            android:text="@string/international"
+            android:textSize="@dimen/mediumTextSize" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:orientation="horizontal">
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvBankNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/bankName"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/mediumTextSize" />
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/btAddedBankList"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/drawable_colorprimary_roundedcorner"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/addedBankList"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/mediumTextSize"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:cardElevation="@dimen/cardElevation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+            <!-- Required only for International banks -->
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:id="@+id/tvSelectCountryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/selectCountry"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/mediumTextSize"
+                android:visibility="gone" />
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:id="@+id/tvSelectedCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSelectBank"
+                android:layout_margin="@dimen/_10sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:drawableRight="@drawable/ic_next_arrow"
+                android:text="@string/selectedCountry"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/mediumTextSize"
+                android:visibility="gone" />
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:id="@+id/tvSelectBank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/selectBank"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:id="@+id/tvBank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSelectBank"
+                android:layout_margin="@dimen/_10sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:drawableRight="@drawable/ic_next_arrow"
+                android:text="Nordea Bank Finland"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/mediumTextSize" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <!-- Lower part, Account details -->
+    <com.guulpay.customUiComponents.QuicksandMediumTextview
+        android:id="@+id/tvAccDetailsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="@string/accountDetails"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/mediumTextSize" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_1sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:cardElevation="@dimen/cardElevation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <com.guulpay.customUiComponents.QuicksandRegularTextview
+                android:id="@+id/tvAccountHolderName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:text="@string/tvAccountHolderName"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <com.guulpay.customUiComponents.CustomEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                android:hint="Name"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.2dp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@color/lightGrey" />
+
+            <com.guulpay.customUiComponents.QuicksandRegularTextview
+                android:id="@+id/tvAccountNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:text="@string/accountNumber"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <com.guulpay.customUiComponents.CustomEditText
+                android:id="@+id/etAccountno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                android:hint="Account Number"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.2dp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@color/lightGrey" />
+
+            <com.guulpay.customUiComponents.QuicksandRegularTextview
+                android:id="@+id/tvIfscCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:text="@string/ifscCode"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <com.guulpay.customUiComponents.CustomEditText
+                android:id="@+id/etIfsccode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                android:hint="IFSC Code"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.2dp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@color/lightGrey" />
+
+            <!-- IBAN number field is required only for International banks -->
+            <com.guulpay.customUiComponents.QuicksandRegularTextview
+                android:id="@+id/tvIbanNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:text="@string/ibanNumber"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/mediumTextSize"
+                android:visibility="gone" />
+
+            <com.guulpay.customUiComponents.CustomEditText
+                android:id="@+id/etIbanNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:alpha="0.5"
+                android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                android:hint="@string/ibanNumber"
+                android:singleLine="true"
+                android:padding="@dimen/_5sdp"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/mediumTextSize"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/vwLineIbanNumber"
+                android:layout_width="match_parent"
+                android:layout_height="1.2dp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@color/lightGrey"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

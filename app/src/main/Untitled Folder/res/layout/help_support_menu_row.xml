@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:layout_marginLeft="@dimen/_5sdp"
+    android:layout_marginRight="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:id="@+id/llMenuHelpSupportRow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_140sdp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:gravity="center_horizontal"
+            android:text="@string/rechargeBillPayment"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/mediumTextSize" />
+
+        <ImageView
+            android:id="@+id/imgvwIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_recharge_icon_2" />
+
+        <com.guulpay.customUiComponents.QuicksandRegularTextview
+            android:id="@+id/tvDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgvwIcon"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center_horizontal"
+            android:text="Mobile, Electricity, Gas, Internet"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/smallTextSize" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgvwSharpBorder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llMenuHelpSupportRow"
+        android:background="@mipmap/ic_box_lower" />
+</RelativeLayout>

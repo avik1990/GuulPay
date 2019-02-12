@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:splitMotionEvents="false">
+
+        <!-- Top most layout containing: Radiobutton, Card Details and Delete button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/radioBtSavedCardsRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/drawable_radiobutton_selector" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/ic_vis_icon"
+                    android:maxLength="30"
+                    android:text="1234 XXXX XXXX 2345 | DSB"
+                    android:textSize="@dimen/smallTextSize" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvDelSavedCardsRow"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/drawable_colorprimary_roundedcorner"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/delete"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/smallTextSize"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!-- For CVV number -->
+        <LinearLayout
+            android:id="@+id/llCvvSavedCardsRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:text="@string/cvv"
+                android:textSize="@dimen/smallTextSize" />
+
+            <com.guulpay.customUiComponents.CustomEditText
+                android:id="@+id/etCvvno"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:background="@drawable/drawable_white_grey"
+                android:hint="***"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="4"
+                android:padding="@dimen/_8sdp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_cvv_icon"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_5sdp" />
+        </LinearLayout>
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvPayNowFromSavedCrdRow"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:enabled="false"
+            android:alpha="0.5"
+            android:background="@drawable/drawable_colorprimary_roundedcorner"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/payNow"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/smallTextSize"
+            android:visibility="visible" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

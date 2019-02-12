@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/_10sdp"
+    android:paddingLeft="@dimen/_5sdp"
+    android:paddingRight="@dimen/_5sdp"
+    android:paddingTop="@dimen/_10sdp"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/imgvwDrawerRow"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/ic_check_box" />
+
+    <com.guulpay.customUiComponents.QuicksandRegularTextview
+        android:id="@+id/tvDrawerRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_weight="0.95"
+        android:textColor="@android:color/black"
+        android:text="Dummy text"
+        android:textSize="@dimen/mediumTextSize" />
+
+    <ImageView
+        android:id="@+id/imgvwIconDrawerRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/ic_next_arrow" />
+</LinearLayout>

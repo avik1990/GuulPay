@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/llproceed_to_pay_activity"
+    android:orientation="vertical"
+    tools:context=".guulexfinal.GuulexProceedToPay.GuulexProceedToPayActivity">
+
+    <include layout="@layout/common_toolbar_layout" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/flactivity_proceed_to_pay">
+
+        <!--<fragment-->
+            <!--android:name="com.guulpay.guulexfinal.GuulexProceedToPay.GuulexProceedToPayFragment"-->
+            <!--android:id="@+id/fragment_proceed_pay"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"/>-->
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGrey"
+    android:orientation="vertical">
+
+    <include layout="@layout/cardvwpasscode_fingerprint_layout" />
+
+    <com.guulpay.customUiComponents.CustomButton
+        android:id="@+id/btAddReceiver"
+        android:layout_width="@dimen/buttonAddReceiverSize"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:background="@drawable/drawable_colorprimary_roundedcorner"
+        android:text="@string/addReceiver"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/mediumTextSize" />
+</LinearLayout>

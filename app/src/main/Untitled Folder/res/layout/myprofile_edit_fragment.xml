@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGrey"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/llProfileedit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Topmost cardview containing: Name and Profile picture -->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:padding="@dimen/cardElevation"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/_5sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp">
+
+                <FrameLayout
+                    android:id="@+id/flProfPic"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/_85sdp"
+                        android:layout_height="@dimen/_85sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:background="@drawable/drawable_white_grey"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:id="@+id/ivProfileimg"
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="@dimen/_70sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_profile_placeholder" />
+
+                    </FrameLayout>
+
+                    <ImageView
+                        android:id="@+id/imgvwEditPicture"
+                        android:layout_width="@dimen/_26sdp"
+                        android:layout_height="@dimen/_26sdp"
+                        android:layout_gravity="bottom|right"
+                        android:background="@drawable/ic_edit_picture" />
+
+
+                </FrameLayout>
+
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:id="@+id/tvFullnameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:layout_toRightOf="@+id/flProfPic"
+                    android:text="@string/fullName"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etNameProfileEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvFullnameText"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/flProfPic"
+                    android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                    android:hint="Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="60"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/normalTextSize" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.2dp"
+                    android:layout_below="@+id/etNameProfileEdit"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/flProfPic"
+                    android:background="@color/lightGrey" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <!-- Lower part cardview for other details -->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:drawableLeft="@drawable/_ic_birthday_icon"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:text="@string/dob"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:id="@+id/tvDob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                    android:hint="Date of Birth"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.2dp"
+                    android:layout_below="@+id/etDob"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@color/lightGrey" />
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:drawableLeft="@drawable/gender"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:text="@string/gender"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:id="@+id/tvGenderProfileEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:drawableRight="@drawable/ic_next_arrow"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/male"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.2dp"
+                    android:layout_below="@+id/etDob"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/flProfPic"
+                    android:background="@color/lightGrey" />
+
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etDob"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:drawableLeft="@drawable/ic_profile_mail_icon_2"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:text="@string/email"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etEmailEditProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                    android:hint="Email"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.2dp"
+                    android:layout_below="@+id/etEmailEditProfile"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@color/lightGrey" />
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etDob"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:drawableLeft="@drawable/ic_profile_mail_icon_2"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:text="Address Line 1"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etAddressLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                    android:hint="Address Line 1"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLength="200"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.2dp"
+                    android:layout_below="@+id/etEmailEditProfile"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@color/lightGrey" />
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etDob"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:drawableLeft="@drawable/ic_profile_mail_icon_2"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:text="Address Line 2"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etAddressLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                    android:hint="Address Line 2"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.2dp"
+                    android:layout_below="@+id/etEmailEditProfile"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@color/lightGrey" />
+
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etDob"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:drawableLeft="@drawable/ic_profile_mail_icon_2"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:text="City"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                    android:hint="City"
+                    android:maxLength="20"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.2dp"
+                    android:layout_below="@+id/etCity"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@color/lightGrey" />
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etDob"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:drawableLeft="@drawable/ic_profile_mail_icon_2"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:text="State"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                    android:hint="State"
+                    android:maxLength="20"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.2dp"
+                    android:layout_below="@+id/etCity"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@color/lightGrey" />
+
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etDob"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:drawableLeft="@drawable/ic_profile_mail_icon_2"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:text="Zip Code"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etZipCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                    android:hint="Zip Code"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.2dp"
+                    android:layout_below="@+id/etZipCode"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@color/lightGrey" />
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:id="@+id/tvKycVerification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:text="Complete your KYC Verification"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:id="@+id/tvKycVerificationF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                    android:padding="@dimen/_5sdp"
+                    android:visibility="gone"
+                    android:singleLine="true"
+                    android:text="Complete your KYC Verification"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/mediumTextSize" />
+
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <com.guulpay.customUiComponents.CustomButton
+            android:id="@+id/btnSave"
+            android:layout_width="@dimen/buttonSaveSize"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/drawable_colorprimary_roundedcorner"
+            android:inputType="textEmailAddress"
+            android:maxLength="100"
+            android:text="@string/save"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/mediumTextSize" />
+    </LinearLayout>
+</ScrollView>

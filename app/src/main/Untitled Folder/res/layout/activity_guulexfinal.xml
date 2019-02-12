@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llfinalActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".guulexfinal.GuulexfinalActivity">
+
+
+    <include layout="@layout/common_toolbar_layout" />
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs_guulex_final_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorPrimary" />
+
+    <!--<android.support.design.widget.TabItem-->
+    <!--android:id="@+id/tabItem"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/tab_text_1" />-->
+
+    <!--<android.support.design.widget.TabItem-->
+    <!--android:id="@+id/tabItem2"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/tab_text_2" />-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPagerTabsGuulexFinal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <FrameLayout
+            android:id="@+id/framelayout_guulex_bottom_tab_area"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            
+        </FrameLayout>
+    </FrameLayout>
+
+</LinearLayout>

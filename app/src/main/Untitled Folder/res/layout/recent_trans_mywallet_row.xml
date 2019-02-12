@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.guulpay.customUiComponents.QuicksandMediumTextview
+        android:id="@+id/tvShowDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:text="Date"
+        android:textSize="@dimen/smallTextSize" />
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:cardElevation="@dimen/cardElevation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="1">
+
+            <com.guulpay.customUiComponents.CircleImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/ic_placeholder" />
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_weight=".7"
+                android:text="Added to Guulpay account from City bank"
+                android:textSize="@dimen/smallTextSize" />
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_weight=".3"
+                android:gravity="right"
+                android:text="+$100.00"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/smallTextSize" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

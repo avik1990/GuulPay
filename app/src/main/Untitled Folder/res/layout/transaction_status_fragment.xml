@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true">
+
+    <com.guulpay.customUiComponents.QuicksandMediumTextview
+        android:id="@+id/tvCalendarTransHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:drawableLeft="@drawable/ic_transaction_status_icon"
+        android:drawablePadding="@dimen/_10sdp"
+        android:text="Select Status"
+        android:textSize="@dimen/smallTextSize" />
+
+    <ImageView
+        android:id="@+id/imgvwShowChart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/ic_chart_icon" />
+
+
+    <View
+        android:id="@+id/vwSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1.2dp"
+        android:layout_below="@+id/imgvwShowChart"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@color/lightGrey"
+        android:visibility="gone" />
+
+    <!-- FrameLayout for PieChart and Center image -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vwSeparator">
+
+        <FrameLayout
+            android:id="@+id/flPieChart"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_180sdp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imgvwLogoCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_g_logo" />
+
+            <lecho.lib.hellocharts.view.PieChartView
+                android:id="@+id/pieChart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/lineraColorIndicator"
+            android:layout_width="@dimen/_78sdp"
+            android:layout_height="@dimen/_78sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_toRightOf="@+id/flPieChart"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:background="@color/pieChartDTH" />
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:text="DTH"
+                    android:textSize="@dimen/smallTextSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:background="@color/pieChartInternet" />
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:text="Internet"
+                    android:textSize="@dimen/smallTextSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:background="@color/pieChartLandline" />
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:text="Landline"
+                    android:textSize="@dimen/smallTextSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:background="@color/pieChartGas" />
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:text="Gas"
+                    android:textSize="@dimen/smallTextSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:background="@color/pieChartElectricBill" />
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:text="Electricity"
+                    android:textSize="@dimen/smallTextSize" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- PieChart Color codes with description -->
+
+</RelativeLayout>

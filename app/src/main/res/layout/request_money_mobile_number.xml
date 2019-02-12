@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGrey"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/cardElevation"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:id="@+id/cardViewMobileRequestMoney"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:layout_margin="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:background="@drawable/ic_mobile_icon" />
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:id="@+id/tvCountryCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableRight="@drawable/down_arrow"
+                android:hint="+45"
+                android:maxLength="5"
+                android:padding="@dimen/_10sdp" />
+
+            <com.guulpay.customUiComponents.CustomEditText
+                android:id="@+id/etMobile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_white_grey"
+                android:hint="@string/mobileNumber"
+                android:inputType="number"
+                android:maxLength="13"
+                android:layout_weight=".9"
+                android:padding="@dimen/_10sdp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@drawable/ic_phone_book_icon" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <com.guulpay.customUiComponents.QuicksandMediumTextview
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textColor="@android:color/black"
+        android:id="@+id/tvRecentlyReq"
+        android:layout_below="@+id/cardViewMobileRequestMoney"
+        android:text="@string/recentlyRequested"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btNext"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_below="@+id/tvRecentlyReq"
+        android:id="@+id/recyclerVwRecentlyReq"
+        />
+
+    <com.guulpay.customUiComponents.CustomButton
+        android:layout_width="@dimen/buttonNextSize"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_colorprimary_roundedcorner"
+        android:text="@string/next"
+        android:id="@+id/btNext"
+        android:textSize="@dimen/normalTextSize"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_15sdp"
+        />
+</RelativeLayout>

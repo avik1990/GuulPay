@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llOtp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/_25sdp"
+    android:layout_marginRight="@dimen/_25sdp"
+    android:background="@drawable/drawable_white_grey"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:padding="@dimen/_5sdp">
+
+    <com.guulpay.customUiComponents.CustomEditText xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/etOtp1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".2"
+        android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+        android:gravity="center"
+        android:hint="@string/dot"
+        android:textSize="@dimen/mediumTextSize"
+        android:imeOptions="actionNext"
+        android:inputType="numberPassword"
+        android:maxLength="1" />
+
+    <com.guulpay.customUiComponents.CustomEditText
+        android:id="@+id/etOtp2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".2"
+        android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+        android:gravity="center"
+        android:hint="@string/dot"
+        android:textSize="@dimen/mediumTextSize"
+        android:imeOptions="actionNext"
+        android:inputType="numberPassword"
+        android:maxLength="1" />
+
+    <com.guulpay.customUiComponents.CustomEditText
+        android:id="@+id/etOtp3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".2"
+        android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+        android:gravity="center"
+        android:hint="@string/dot"
+        android:textSize="@dimen/mediumTextSize"
+        android:imeOptions="actionNext"
+        android:inputType="numberPassword"
+        android:maxLength="1" />
+
+    <com.guulpay.customUiComponents.CustomEditText
+        android:id="@+id/etOtp4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".2"
+        android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+        android:gravity="center"
+        android:hint="@string/dot"
+        android:textSize="@dimen/mediumTextSize"
+        android:imeOptions="actionDone"
+        android:inputType="numberPassword"
+        android:maxLength="1" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight=".2"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:gravity="right"
+            android:textSize="@dimen/mediumTextSize"
+            android:text="60"
+            android:textColor="@color/colorPrimary" />
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:id="@+id/tvSecs"
+            android:textSize="@dimen/mediumTextSize"
+            android:text="seconds" />
+    </LinearLayout>
+</LinearLayout>

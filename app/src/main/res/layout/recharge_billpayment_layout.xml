@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.guulpay.customUiComponents.QuicksandMediumTextview
+        android:id="@+id/tvRechargeBillPayText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/rechargeBillPayment"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/mediumTextSize" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalRechargeView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvRechargeBillPayText"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/llMLE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.guulpay.customUiComponents.QuicksandRegularTextview
+                android:id="@+id/tvmobilerecharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableTop="@drawable/ic_mobile_recharge_icon"
+                android:gravity="center_horizontal"
+                android:text="@string/recharge"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <com.guulpay.customUiComponents.QuicksandRegularTextview
+                android:id="@+id/tvforex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableTop="@drawable/ic_forex_icon"
+                android:gravity="center_horizontal"
+                android:text="@string/gullex"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <com.guulpay.customUiComponents.QuicksandRegularTextview
+                android:id="@+id/tvsavedcards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableTop="@drawable/ic_cards_icon"
+                android:gravity="center_horizontal"
+                android:text="@string/cards"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <com.guulpay.customUiComponents.QuicksandRegularTextview
+                android:id="@+id/tvAyuuto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableTop="@drawable/ic_micro_finance"
+                android:gravity="center_horizontal"
+                android:text="@string/ayuuto"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/mediumTextSize" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:layout_below="@+id/llMLE"
+         android:orientation="horizontal"
+         android:layout_marginTop="@dimen/_10sdp"
+         android:layout_marginBottom="@dimen/_10sdp"
+         android:id="@+id/llDIG"
+         >
+
+         <com.guulpay.customUiComponents.QuicksandRegularTextview
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="@dimen/_15sdp"
+             android:layout_marginRight="@dimen/_15sdp"
+             android:drawablePadding="@dimen/_5sdp"
+             android:textColor="@android:color/black"
+             android:textSize="@dimen/mediumTextSize"
+             android:drawableTop="@drawable/ic_dth_recharge_icon"
+             android:gravity="center_horizontal"
+             android:text="@string/dth" />
+
+         <com.guulpay.customUiComponents.QuicksandRegularTextview
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="@dimen/_15sdp"
+             android:layout_marginRight="@dimen/_15sdp"
+             android:textSize="@dimen/mediumTextSize"
+             android:drawablePadding="@dimen/_5sdp"
+             android:textColor="@android:color/black"
+             android:drawableTop="@drawable/ic_internet_recharge_icon"
+             android:gravity="center_horizontal"
+             android:text="@string/internet" />
+
+         <com.guulpay.customUiComponents.QuicksandRegularTextview
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="@dimen/_15sdp"
+             android:layout_marginRight="@dimen/_15sdp"
+             android:drawablePadding="@dimen/_5sdp"
+             android:textSize="@dimen/mediumTextSize"
+             android:textColor="@android:color/black"
+             android:drawableTop="@drawable/ic_gas_icon"
+             android:gravity="center_horizontal"
+             android:text="@string/gas" />
+     </LinearLayout>-->
+
+</RelativeLayout>

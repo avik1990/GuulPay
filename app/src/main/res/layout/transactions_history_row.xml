@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:splitMotionEvents="false">
+
+    <com.guulpay.customUiComponents.QuicksandRegularTextview
+        android:id="@+id/tvShowDateTransHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:text="Date"
+        android:textSize="@dimen/smallTextSize" />
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:cardElevation="@dimen/cardElevation">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.guulpay.customUiComponents.CircleImageView
+                android:id="@+id/imgvwTransHistory"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/_9sdp"
+                android:src="@drawable/ic_transaction_add_money_icon"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imgvwTransHistory"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/llTransDet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/_7sdp"
+                    android:layout_weight=".7"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.guulpay.customUiComponents.QuicksandRegularTextview
+                        android:id="@+id/tvTransHistoryDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Added to Guulpay account from HDFC bank"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <com.guulpay.customUiComponents.QuicksandRegularTextview
+                        android:id="@+id/tvTransHistoryId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvTransHistoryDetails"
+                        android:text="Transaction ID: #1234567890"
+                        android:textSize="@dimen/_9sdp" />
+                </LinearLayout>
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_3sdp"
+                    android:text="+$100.00"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <FrameLayout
+                    android:id="@+id/flDownloadTransHistory"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight=".2"
+                    android:background="@color/buttonBg"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_download_white_icon" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

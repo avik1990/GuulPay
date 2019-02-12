@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_8sdp"
+    android:scrollbars="none">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/llSendMoneyDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_weight=".25"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.guulpay.customUiComponents.CircleImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_send_money" />
+
+            <com.guulpay.customUiComponents.QuicksandRegularTextview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgvwHome"
+                android:gravity="center"
+                android:text="@string/send"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/smallTextSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llRequestMoneyDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_weight=".25"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.guulpay.customUiComponents.CircleImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_request_money" />
+
+            <com.guulpay.customUiComponents.QuicksandRegularTextview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/request"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/smallTextSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAddBankDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_weight=".25"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.guulpay.customUiComponents.CircleImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_add_bank" />
+
+            <com.guulpay.customUiComponents.QuicksandRegularTextview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgvwHome"
+                android:gravity="center"
+                android:text="@string/addBank"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/smallTextSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAddMoneyDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_weight=".25"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.guulpay.customUiComponents.CircleImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_add_money" />
+
+            <com.guulpay.customUiComponents.QuicksandRegularTextview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgvwHome"
+                android:gravity="center"
+                android:text="@string/add"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/smallTextSize" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</HorizontalScrollView>

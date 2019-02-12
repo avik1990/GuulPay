@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:weightSum="1"
+    >
+
+    <com.guulpay.customUiComponents.QuicksandMediumTextview
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".2"
+        android:text="+91"
+        android:gravity="center_horizontal"
+        android:id="@+id/tvCountryCode"
+        android:layout_margin="@dimen/_10sdp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/mediumTextSize"
+        />
+
+    <com.guulpay.customUiComponents.QuicksandRegularTextview
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".6"
+        android:text="Country name"
+        android:id="@+id/tvCountryNames"
+        android:layout_margin="@dimen/_10sdp"
+        android:textSize="@dimen/mediumTextSize"
+        />
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGrey"
+    android:animateLayoutChanges="true"
+    >
+
+    <include layout="@layout/enter_amount_layout"
+        android:id="@+id/include_enter_amt"
+        />
+
+    <com.guulpay.customUiComponents.CustomButton
+        android:id="@+id/btNextPayMoney"
+        android:layout_width="@dimen/buttonNextSize"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:background="@drawable/drawable_colorprimary_roundedcorner"
+        android:text="@string/pay"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/mediumTextSize" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:orientation="horizontal">
+
+        <com.guulpay.customUiComponents.QuicksandRegularTextview
+            android:id="@+id/tvSendMoneyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pay from"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/mediumTextSize" />
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvGuulpayWallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Guulpay Wallet"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/mediumTextSize" />
+    </LinearLayout>
+</RelativeLayout>

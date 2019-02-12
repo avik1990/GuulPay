@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="normalTextSize">@dimen/_14sdp</dimen>
+    <dimen name="mediumTextSize">@dimen/_12sdp</dimen>
+    <dimen name="smallTextSize">@dimen/_10sdp</dimen>
+    <dimen name="smallveryTextSize">@dimen/_9sdp</dimen>
+    <dimen name="largeTextSize">@dimen/_16sdp</dimen>
+    <dimen name="extraLargeTextSize">@dimen/_25sdp</dimen>
+
+    <!-- Buttons width -->
+    <dimen name="loginButtonNextSize">@dimen/_100sdp</dimen>
+    <dimen name="buttonSaveQrSize">@dimen/_140sdp</dimen>
+    <dimen name="buttonVerifySize">@dimen/_140sdp</dimen>
+    <dimen name="buttonSendSize">@dimen/_140sdp</dimen>
+    <dimen name="buttonLogout">@dimen/_140sdp</dimen>
+    <dimen name="buttonNextSize">@dimen/_140sdp</dimen>
+    <dimen name="buttonSaveSize">@dimen/_140sdp</dimen>
+    <dimen name="buttonSubmitSize">@dimen/_120sdp</dimen>
+    <dimen name="buttonRequestSize">@dimen/_140sdp</dimen>
+    <dimen name="buttonAddMoneySize">@dimen/_120sdp</dimen>
+    <dimen name="buttonAddReceiverSize">@dimen/_150sdp</dimen>
+    <dimen name="buttonBackToHome">@dimen/_150sdp</dimen>
+
+    <!-- Cardview card elevation -->
+    <dimen name="cardElevation">@dimen/_1sdp</dimen>
+    <dimen name="cardCornerRadius">@dimen/_5sdp</dimen>
+</resources>

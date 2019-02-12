@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_5sdp"
+    >
+
+    <com.guulpay.customUiComponents.CustomEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_white_grey"
+        android:hint="@string/cardNumber"
+        android:padding="@dimen/_10sdp"
+        android:maxLength="19"
+        android:textSize="@dimen/mediumTextSize"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        />
+
+    <!-- For MM and YYYY -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/_7sdp"
+        >
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:text="@string/month"
+            android:paddingBottom="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            />
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            android:layout_weight=".3"
+            android:background="@drawable/drawable_white_grey"
+            android:hint="MM"
+            android:drawableRight="@drawable/ic_down_arrow"
+            />
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/year"
+            android:gravity="center_horizontal"
+            />
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            android:layout_weight=".3"
+            android:maxLength="4"
+            android:background="@drawable/drawable_white_grey"
+            android:hint="YYYY"
+            android:drawableRight="@drawable/ic_down_arrow"
+            />
+    </LinearLayout>
+
+
+    <!-- For CVV number -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:gravity="center_vertical"
+        >
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:text="@string/cvv"
+            android:paddingBottom="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            />
+
+        <com.guulpay.customUiComponents.CustomEditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:padding="@dimen/_8sdp"
+            android:background="@drawable/drawable_white_grey"
+            android:hint="***"
+            android:maxLength="4"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:layout_marginRight="@dimen/_7sdp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/ic_cvv_icon"
+            />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardVwPhQr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBalanceAmt"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:cardElevation="@dimen/cardElevation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <com.guulpay.customUiComponents.QuicksandMediumTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/phQr"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/drawable_white_grey">
+
+                <SearchView
+                    android:id="@+id/searchVwMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_40sdp"
+                    android:iconifiedByDefault="false"
+                    android:queryBackground="@android:color/transparent"
+                    android:queryHint="@string/enterMobileNumber"
+                    android:searchIcon="@null"
+                    android:theme="@style/AppSearchView" />
+
+                <ImageView
+                    android:id="@+id/imgvwQrSendMoney"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/ic_qr_code_small" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <!-- Progress Dialog -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_weight="1"
+        android:visibility="visible" />
+
+    <!-- Middle contact list -->
+    <ListView
+        android:id="@+id/listVwContactList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="@dimen/_7sdp"
+        android:paddingBottom="@dimen/_1sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingTop="@dimen/_1sdp"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <com.guulpay.customUiComponents.CustomButton
+        android:id="@+id/btNextSendMoney"
+        android:layout_width="@dimen/buttonSendSize"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/drawable_colorprimary_roundedcorner"
+        android:text="@string/send"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/mediumTextSize" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <com.guulpay.customUiComponents.QuicksandRegularTextview
+            android:id="@+id/tvSendMoneyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send money from"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/mediumTextSize" />
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:id="@+id/tvGuulpayWallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Guulpay Wallet"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/mediumTextSize" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.guulpay.customUiComponents.QuicksandRegularTextview
+        android:id="@+id/tvCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_51sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="Select Currency"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/mediumTextSize"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/llSelectCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvCurrency"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/imgvwSelectCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_type_icon" />
+
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spinnerSelectCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvSelectCountry"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_weight=".18">
+
+        </android.support.v7.widget.AppCompatSpinner>
+    </LinearLayout>
+        <View
+        android:id="@+id/hrCurrency"
+        android:layout_below="@+id/llguulexAmount"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:layout_marginRight="@dimen/_7sdp"
+        android:background="@color/hrRowGuulexFinalProceedToPay"/>
+
+
+    <com.guulpay.customUiComponents.QuicksandRegularTextview
+        android:id="@+id/tvGuulexAmount"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_51sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="Guulex Amount"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/mediumTextSize"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/llGuulexAmount"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvGuulexAmount"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/imgvwSelectAmount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_guulex_icon" />
+
+
+        <com.guulpay.customUiComponents.CustomEditText
+            android:id="@+id/edtAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_weight=".18"
+            android:hint="Enter Your Guulex Amount"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textSize="@dimen/mediumTextSize"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGrey"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Selected order for help -->
+        <include layout="@layout/selected_order_helpsupport_layout" />
+
+        <!-- Middle Cardview : Enter complaint details with email id and Submit layout -->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.guulpay.customUiComponents.QuicksandMediumTextview
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:text="@string/writeToUs"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:text="@string/enterYourEmailId"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etEmailHelpSupport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.2dp"
+                    android:layout_below="@+id/etEmailHelpSupport"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@color/lightGrey" />
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:text="@string/phoneNumber"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <com.guulpay.customUiComponents.QuicksandMediumTextview
+                        android:id="@+id/tvCountryCodeHelpSupport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:drawableRight="@drawable/down_arrow"
+                        android:gravity="center_vertical"
+                        android:maxLength="8"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="+358"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/mediumTextSize" />
+
+                    <com.guulpay.customUiComponents.CustomEditText
+                        android:id="@+id/etPhoneHelpSupport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="13"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textSize="@dimen/mediumTextSize" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.2dp"
+                    android:layout_below="@+id/etPhoneHelpSupport"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@color/lightGrey" />
+
+                <com.guulpay.customUiComponents.QuicksandRegularTextview
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:text="@string/msgComplaint"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.CustomEditText
+                    android:id="@+id/etComplaintMsgHelpSupport"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/drawable_white_grey"
+                    android:gravity="top"
+                    android:inputType="text"
+                    android:maxLength="250"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="false"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.guulpay.customUiComponents.CustomButton
+                    android:id="@+id/btnSave"
+                    android:layout_width="@dimen/buttonSubmitSize"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/drawable_colorprimary_roundedcorner"
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/mediumTextSize" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15sdp"
+            android:gravity="center_horizontal"
+            android:text="@string/or"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/mediumTextSize" />
+
+        <!-- Bottom customer support call details layout -->
+        <include layout="@layout/calldetails_helpsupport_layout" />
+    </LinearLayout>
+
+</ScrollView>

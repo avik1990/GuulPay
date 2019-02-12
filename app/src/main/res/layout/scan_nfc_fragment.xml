@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llQrScanParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.guulpay.customUiComponents.QuicksandMediumTextview
+        android:id="@+id/qrText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:gravity="center_horizontal"
+        android:text="Please hold your device on back of NFC tag"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/mediumTextSize" />
+
+
+    <com.guulpay.customUiComponents.QuicksandMediumTextview
+        android:id="@+id/qrTextTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/mediumTextSize" />
+
+
+    <!-- <ImageView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:layout_marginTop="@dimen/_20sdp"
+         android:id="@+id/imgvwQrScanSample"
+         android:background="@drawable/ic_qr_scan_sample"
+         />-->
+</RelativeLayout>

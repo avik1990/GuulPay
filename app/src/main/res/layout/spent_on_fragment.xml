@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true">
+
+    <com.guulpay.customUiComponents.QuicksandMediumTextview
+        android:id="@+id/tvCalendarTransHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:textSize="@dimen/smallTextSize"
+        android:drawableLeft="@drawable/ic_transaction_clender_icon"
+        android:drawablePadding="@dimen/_10sdp"
+        android:text="Select Date" />
+
+    <ImageView
+        android:id="@+id/imgvwShowChart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/ic_chart_icon" />
+
+
+    <View
+        android:id="@+id/vwSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1.2dp"
+        android:layout_below="@+id/imgvwShowChart"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@color/lightGrey"
+        android:visibility="gone" />
+
+    <!-- FrameLayout for PieChart and Center image -->
+    <FrameLayout
+        android:id="@+id/flPieChart"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_below="@+id/vwSeparator"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imgvwLogoCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_g_logo" />
+
+        <lecho.lib.hellocharts.view.PieChartView
+            android:id="@+id/pieChart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+    <!-- PieChart Color codes with description -->
+    <LinearLayout
+        android:id="@+id/llChartLabels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:drawableLeft="@drawable/ic_transaction_clender_icon"
+            android:drawablePadding="@dimen/_10sdp"
+            android:text="Mobile Recharge" />
+
+        <!--<com.guulpay.customUiComponents.QuicksandMediumTextview-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="@dimen/_5sdp"-->
+            <!--android:drawableLeft="@drawable/ic_transaction_clender_icon"-->
+            <!--android:drawablePadding="@dimen/_10sdp"-->
+            <!--android:text="@string/bankTransfer" />-->
+
+        <com.guulpay.customUiComponents.QuicksandMediumTextview
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:drawableLeft="@drawable/ic_transaction_clender_icon"
+            android:drawablePadding="@dimen/_10sdp"
+            android:text="Guulex" />
+
+
+        <!--<com.guulpay.customUiComponents.QuicksandMediumTextview-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="@dimen/_5sdp"-->
+            <!--android:drawableLeft="@drawable/ic_transaction_clender_icon"-->
+            <!--android:drawablePadding="@dimen/_10sdp"-->
+            <!--android:text="@string/gas" />-->
+
+        <!--<com.guulpay.customUiComponents.QuicksandMediumTextview-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="@dimen/_5sdp"-->
+            <!--android:drawableLeft="@drawable/ic_transaction_clender_icon"-->
+            <!--android:drawablePadding="@dimen/_10sdp"-->
+            <!--android:text="@string/electricBill" />-->
+
+        <!--<com.guulpay.customUiComponents.QuicksandMediumTextview-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:drawableLeft="@drawable/ic_transaction_clender_icon"-->
+            <!--android:drawablePadding="@dimen/_10sdp"-->
+            <!--android:text="@string/landline" />-->
+
+    </LinearLayout>
+
+</RelativeLayout>

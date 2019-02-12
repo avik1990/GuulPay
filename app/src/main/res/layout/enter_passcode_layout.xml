@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llPasscode"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_white_grey"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/_10sdp"
+    android:visibility="visible"
+    android:weightSum="1"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
+
+    <com.guulpay.customUiComponents.CustomEditText
+        android:id="@+id/etPasscode1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".22"
+        android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+        android:gravity="center_horizontal"
+        android:hint="@string/dot"
+        android:imeOptions="actionNext"
+        android:inputType="numberPassword"
+        android:maxLength="1"
+        android:textSize="@dimen/mediumTextSize"
+        android:nextFocusForward="@+id/etPasscode2"
+        android:nextFocusRight="@+id/etPasscode2"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        />
+
+    <com.guulpay.customUiComponents.CustomEditText
+        android:id="@+id/etPasscode2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".22"
+        android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+        android:gravity="center_horizontal"
+        android:hint="@string/dot"
+        android:imeOptions="actionNext"
+        android:inputType="numberPassword"
+        android:maxLength="1"
+        android:nextFocusRight="@+id/etPasscode3"
+        android:textSize="@dimen/mediumTextSize"
+        android:focusableInTouchMode="true"
+        android:focusable="true" />
+
+    <com.guulpay.customUiComponents.CustomEditText
+        android:id="@+id/etPasscode3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".22"
+        android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+        android:gravity="center_horizontal"
+        android:hint="@string/dot"
+        android:imeOptions="actionNext"
+        android:inputType="numberPassword"
+        android:maxLength="1"
+        android:textSize="@dimen/mediumTextSize"
+        android:nextFocusForward="@+id/etPasscode4"
+        android:nextFocusRight="@+id/etPasscode4"
+        android:focusableInTouchMode="true"
+        android:focusable="true"/>
+
+    <com.guulpay.customUiComponents.CustomEditText
+        android:id="@+id/etPasscode4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".22"
+        android:background="@drawable/drawable_transparent_transparent_roundedcorner"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="@string/dot"
+        android:imeOptions="actionDone"
+        android:inputType="numberPassword"
+        android:maxLength="1"
+        android:textSize="@dimen/mediumTextSize"
+        android:focusable="true"/>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".12">
+
+        <ImageView
+            android:id="@+id/imgvwShowHidePwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/hide_icon" />
+
+    </FrameLayout>
+
+</LinearLayout>
